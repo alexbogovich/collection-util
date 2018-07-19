@@ -6,6 +6,7 @@ plugins {
     `maven-publish`
     id("com.jfrog.bintray") version "1.8.4"
     id("com.github.ben-manes.versions") version "0.20.0"
+    id("com.gradle.build-scan") version "1.15.1"
 }
 
 group = "io.github.alexbogovich"
@@ -19,6 +20,12 @@ dependencies {
     compile ("org.scala-lang:scala-library:2.11.12")
     testCompile("org.scalatest:scalatest_2.11:3.0.5")
     testCompile ("junit:junit:4.12")
+}
+
+
+buildScan {
+    setTermsOfServiceUrl("https://gradle.com/terms-of-service")
+    setTermsOfServiceAgree("yes")
 }
 
 configure<JavaPluginConvention> {
