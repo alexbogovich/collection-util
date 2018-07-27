@@ -10,7 +10,7 @@ plugins {
 }
 
 group = "io.github.alexbogovich"
-version = "1.0"
+version = "1.1"
 
 repositories {
     mavenCentral()
@@ -20,6 +20,7 @@ dependencies {
     compile ("org.scala-lang:scala-library:2.11.12")
     testCompile("org.scalatest:scalatest_2.11:3.0.5")
     testCompile ("junit:junit:4.12")
+    testCompile ("org.assertj:assertj-core:3.10.0")
 }
 
 
